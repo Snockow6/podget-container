@@ -1,6 +1,8 @@
 <p>Podget Container is not built by the author/creator of Podget.</p>
 <p>This is a simple container built using Centos 8 container that runs Podget.</p>
 
+<p>https://github.com/dvehrs/podget</p>
+
 <h3>Enviroment Variables:</h3>
 <p>PUID=1000 #User ID</p>
 <p>PGID=1000 #Group ID</p>
