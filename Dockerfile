@@ -17,8 +17,8 @@ RUN mkdir -p /podget/POD
 RUN mkdir -p /podget/.podget
 RUN chown -R abc /podget
 
-COPY ./run.sh /podget
-RUN chmod +x /podget/run.sh
+COPY ./run.sh /
+RUN chmod +x /run.sh
 
 #get podget release from github and put it into tmp directory
 RUN wget https://github.com/dvehrs/podget/archive/refs/tags/v0.8.8.tar.gz -P /tmp
