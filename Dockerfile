@@ -10,8 +10,8 @@ ENV Refresh=1d
 RUN dnf install wget make -y
 
 # create User and Goup
-RUN groupadd -g $PGID abc
 RUN useradd -u $PUID -d /podget abc
+RUN groupmod -g $PGID abc
 RUN usermod -aG abc abc
 
 # create and configure folders
