@@ -29,4 +29,4 @@ RUN tar -xvf /tmp/v0.8.8.tar.gz -C /tmp
 #install podget
 RUN cd /tmp/podget-0.8.8 && make install
 
-CMD ["/podget/run.sh"]
+CMD ["/run.sh"]
