@@ -1,13 +1,13 @@
-FROM centos:8
+FROM ubuntu:20.04
 
 ENV PUID=1000
 ENV PGID=1000
-ENV TZ=Europe/London
 ENV Refresh=1d
 
 # update cache and install wget and make
-#RUN dnf update -y
-RUN dnf install wget make -y
+RUN apt-get update -y
+RUN apt-get install wget make -y
+RUN apt-get clean
 
 # create User and Goup
 RUN useradd -u $PUID -d /podget abc
