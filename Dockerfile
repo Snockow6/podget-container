@@ -15,7 +15,8 @@ RUN useradd -u $PUID -d /Podget abc
 # create and configure folders
 VOLUME /Podget/POD
 VOLUME /Podget/.podget
-RUN chown -R abc:abc /Podget
+RUN chown abc:abc /Podget/POD
+RUN chown abc:abc /Podget/.podget
 
 COPY ./run.sh /
 RUN chmod +x /run.sh
