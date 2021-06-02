@@ -11,8 +11,6 @@ RUN apt-get clean
 
 # create User and Goup
 RUN useradd -u $PUID -d /podget abc
-RUN groupmod -g $PGID abc
-RUN usermod -aG abc abc
 
 # create and configure folders
 RUN mkdir -p /podget/POD
