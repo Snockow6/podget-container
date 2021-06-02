@@ -13,8 +13,8 @@ RUN apt-get clean
 RUN useradd -u $PUID -d /Podget abc
 
 # create and configure folders
-VOLUME /Podget/POD
-VOLUME /Podget/.podget
+RUN mkdir -p /Podget/POD
+RUN mkdir -p /Podget/.podget
 RUN chown abc:abc /Podget/POD
 RUN chown abc:abc /Podget/.podget
 
