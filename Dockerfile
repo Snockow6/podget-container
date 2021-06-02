@@ -10,12 +10,12 @@ RUN apt-get install wget make -y
 RUN apt-get clean
 
 # create User and Goup
-RUN useradd -u $PUID -d /podget abc
+RUN useradd -u $PUID -d /Podget abc
 
 # create and configure folders
-RUN mkdir -p /podget/POD
-RUN mkdir -p /podget/.podget
-RUN chown -R abc /podget
+VOLUME /Podget/POD
+VOLUME /Podget/.podget
+RUN chown -R abc /Podget
 
 COPY ./run.sh /
 RUN chmod +x /run.sh
@@ -28,5 +28,7 @@ RUN tar -xvf /tmp/v0.8.8.tar.gz -C /tmp
 
 #install podget
 RUN cd /tmp/podget-0.8.8 && make install
+
+WORKDIR /Podget
 
 CMD ["/run.sh"]
